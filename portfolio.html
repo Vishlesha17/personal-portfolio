@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vishlesha Habib's portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffff99;
+    }
+
+    section {
+      padding: 30px 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    section:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+
+    section:nth-of-type(3) {
+      animation-delay: 0.4s;
+    }
+
+    section:nth-of-type(4) {
+      animation-delay: 0.6s;
+    }
+
+    img {
+      max-width: 150px;
+      border-radius: 50%;
+      animation: fadeIn 1.2s ease-in;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+    }
+
+    ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th {
+      background: #ee0979;
+      color: white;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    form {
+      margin-top: 20px;
+      max-width: 500px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #ee0979;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #d10068;
+    }
+
+    footer {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    a {
+      color: #ee0979;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="C:\Users\vishl\OneDrive\Desktop\Web technology assignment\vishu.jpg" alt="Profile Image">
+    <h1>Vishlesha Habib</h1>
+    <p>Hello! I’m Vishlesha Habib, a Aspiring Software Tester with a Bachelor’s degree in Computer Applications (BCA)
+      and currently pursuing my Master of Computer Applications (MCA).</p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>manual Testing</li>
+      <li>Selenium</li>
+      <li>Git & GitHub</li>
+      <li>java Programming</li>
+      <li>Python Programming</li>
+      <li>SQL</li>
+      <li>TestNG</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <table>
+      <tr>
+        <th>Project Name</th>
+        <th>Description</th>
+        <th>Link</th>
+      </tr>
+      <tr>
+        <td>Portfolio Website</td>
+        <td>My personal portfolio built using HTML/CSS/JS.</td>
+        <td><a href="https://example.com" target="_blank">Visit</a></td>
+      </tr>
+     
+    </table>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Or connect with me on:</p>
+    <a href="https://github.com/" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      alert("Thank you for contacting me!");
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>
